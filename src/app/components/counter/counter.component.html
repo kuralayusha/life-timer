@@ -1,0 +1,13 @@
+<div id="counter-container">
+  <div id="counter">{{ age }}.{{ seconds.toString().padStart(8, "0") }}</div>
+  <div class="btns">
+    <button (click)="reset()" title="Change Birth Date">Restart</button>
+    <img
+      (click)="showInfo()"
+      src="../../../assets/info-svgrepo-com.svg"
+      alt="info"
+      title="info"
+    />
+    <div class="info" *ngIf="showInfoPopup">1 year is 31 556 926 seconds</div>
+  </div>
+</div>

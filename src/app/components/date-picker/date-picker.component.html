@@ -1,0 +1,13 @@
+<div class="container">
+  <label *ngIf="labelOne" for="datepicker">{{
+    "Select your birth date"
+  }}</label>
+  <label *ngIf="labelTwo" for="datepicker" class="error">{{
+    "Did you born today?"
+  }}</label>
+  <label *ngIf="labelThree" for="datepicker" class="error">{{
+    "You couldn't have been born in the future!"
+  }}</label>
+  <input type="date" id="datepicker" [(ngModel)]="selectedDate" />
+  <button (click)="onStart()">Start</button>
+</div>
